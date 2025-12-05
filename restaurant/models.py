@@ -17,3 +17,5 @@ class Booking(models.Model):
     name = models.CharField(max_length=255)
     no_of_guest = models.IntegerField()
     bookingDate = models.DateTimeField()
+    def __str__(self) -> str:
+        return f'{self.name} for {self.no_of_guest} guests on {self.bookingDate}'
